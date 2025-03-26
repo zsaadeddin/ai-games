@@ -16,6 +16,15 @@ public class AIModelLoader : MonoBehaviour
         Debug.Log("✅ نموذج الذكاء الاصطناعي تم تحميله بنجاح!");
     }
 
+
+      void Stop()
+    {
+        // تحميل النموذج
+        model = ModelLoader.Dispose()
+
+        Debug.Log("rermoved from redering on the browder level");
+    }
+
     private SentisInference NewMethod()
     {
         return new SentisInference(model);
